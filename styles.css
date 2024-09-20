@@ -1,0 +1,398 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    max-width: 1200px; /* 限制最大宽度 */
+    margin: 0 auto; /* 居中网页内容 */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #e3f2fd;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.music-player {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+.music-player iframe {
+    border-radius: 12px;
+}
+
+#playPauseBtn {
+    padding: 5px 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#volumeControl {
+    width: 100px;
+}
+
+.header-image {
+    width: 80px;  /* 增加照片大小 */
+    height: 80px;  /* 增加照片大小 */
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.header-image:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    margin: 0;  /* 移除默认边距 */
+}
+
+#carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;  /* 减小最大宽度 */
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#aiChat {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #f5f5f5;  /* 保持AI对话栏的浅灰色背景 */
+}
+
+#chatWindow {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    background-color: #ffffff;  /* 保持聊天窗口为白色背景 */
+    padding: 10px;  /* 添加内边距 */
+    text-align: left; /* 添加这行，确保内容左对齐 */
+}
+
+form input, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 300px;  /* 设置固定高度 */
+    object-fit: cover;  /* 保持图片比例，填充整个区域 */
+    flex-shrink: 0;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.contact-button {
+    background-color: #3498db;  /* 蓝色 */
+    color: white;  /* 白色文字,以提高可读性 */
+    border: none;
+    padding: 8px 16px;  /* 缩小了padding */
+    font-size: 14px;  /* 稍微减小了字体大小 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 4px;  /* 添加圆角 */
+}
+
+.contact-button:hover {
+    background-color: #2980b9;  /* 悬停时的深蓝色 */
+}
+
+.intro-text {
+    font-size: 24px;  /* 更大的字号 */
+    font-weight: bold;  /* 加粗 */
+    font-style: italic;  /* 斜体 */
+    text-align: center;  /* 改回居中对齐 */
+    padding: 20px 0;  /* 上下添加一些间距 */
+    color: red;  /* 添加红色字体 */
+}
+
+#intro {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+#intro img {
+    width: 100px;  /* 缩小照片尺寸 */
+    height: 100px;
+    object-fit: cover;  /* 保持图片比例 */
+    border-radius: 50%;  /* 使图片变成圆形 */
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#visitorInfo {
+    width: 48%;
+}
+
+#decorativeLines {
+    width: 48%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abstract-lines {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.line {
+    position: absolute;
+    background-color: #3498db;
+    opacity: 0.7;
+}
+
+.line1 {
+    width: 2px;
+    height: 80%;
+    top: 10%;
+    left: 20%;
+    transform: rotate(15deg);
+}
+
+.line2 {
+    width: 60%;
+    height: 2px;
+    top: 30%;
+    right: 10%;
+    transform: rotate(-10deg);
+}
+
+.line3 {
+    width: 2px;
+    height: 60%;
+    bottom: 10%;
+    right: 30%;
+    transform: rotate(-20deg);
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    #visitorInfo, #decorativeLines {
+        width: 100%;
+    }
+
+    #decorativeLines {
+        height: 200px;
+        margin-top: 2rem;
+    }
+}
+
+footer {
+    background-color: #e3f2fd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #3498db;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    color: #2980b9;
+    transform: scale(1.1);
+}
+
+.modal {
+    display: none; /* 确保模态框默认不显示 */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 40px 20px 20px; /* 增加顶部padding为关闭按钮留出空间 */
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 统一关闭按钮样式 */
+.modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #ff0000;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+    z-index: 1001;
+}
+
+.modal .close:hover {
+    color: #cc0000;
+}
+
+/* 自定义模态框（头像和社交媒体）样式 */
+#customModal .modal-content {
+    height: auto;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+#modalImage {
+    max-width: 100%;
+    max-height: 60vh;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+
+#modalText {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* AI 聊天模态框特定样式 */
+#aiChatModal .modal-content {
+    height: auto;
+    max-height: 80vh;
+}
+
+#chatWindow {
+    height: 300px;
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+.chat-input-container {
+    display: flex;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#userInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    margin-right: 0;
+}
+
+#sendBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background-color: #45a049;
+}
+
+.ai-chat-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ai-chat-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.ai-chat-button:hover {
+    background-color: #45a049;
+}

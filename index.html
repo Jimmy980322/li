@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介 - 李青松</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>李青松</h1>
+            <img src="images/touxiang.png" alt="李青松的照片" class="header-image" id="avatarImage">
+        </div>
+        <div class="music-player">
+            <iframe src="https://open.spotify.com/embed/playlist/7Jb5DvCr5DnmoNaPqHPY1U" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </div>
+        <button id="contactBtn" class="contact-button">联系我</button>
+    </header>
+
+    <section id="intro">
+        <p class="intro-text">*****我叫李青松，我是大笨蛋*****</p>
+    </section>
+
+    <!-- 将 AI 对话按钮移到照片轮播的正上方 -->
+    <div class="ai-chat-container">
+        <button id="aiChatBtn" class="ai-chat-button">来撩我</button>
+    </div>
+
+    <section id="carousel">
+        <div class="carousel-container">
+            <img src="images/eKpNdDi.jpg" alt="轮播图片1" class="carousel-image">
+            <img src="images/OIP.jpg" alt="轮播图片2" class="carousel-image">
+            <img src="images/R (1).jpg" alt="轮播图片3" class="carousel-image">
+            <img src="images/R.jpg" alt="轮播图片4" class="carousel-image">
+        </div>
+        <button class="carousel-button prev">上一张</button>
+        <button class="carousel-button next">下一张</button>
+    </section>
+
+    <!-- 修改 AI 对话弹窗 -->
+    <div id="aiChatModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>AI 对话</h2>
+            <div id="chatWindow"></div>
+            <div class="chat-input-container">
+                <input type="text" id="userInput" placeholder="与AI对话...">
+                <button id="sendBtn">发送</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 将留言框部分替换为历史简介 -->
+    <section id="contact-section">
+        <div class="contact-container">
+            <div id="historicalIntro">
+                <h2>李青松的历史简介</h2>
+                <p class="historical-text">
+                    李青松，一个不学无术的社会混子。年少时不思进取，辍学离家，四处游荡。他曾在农村做过农活，但因懒惰而无法坚持。后来，他流连于青楼，沉迷酒色，虚度光阴。没有一技之长，也不愿意努力改变现状，李青松就这样浑浑噩噩地过着醉生梦死的生活。他的故事成为了一个反面教材，警示后人要珍惜时光，努力学习，不要重蹈他的覆辙。
+                </p>
+            </div>
+            <div id="decorativeLines">
+                <!-- 抽象线条装饰保持不变 -->
+                <div class="abstract-lines">
+                    <div class="line line1"></div>
+                    <div class="line line2"></div>
+                    <div class="line line3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 添加自定义模态框 -->
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modalImage" src="" alt="微信二维码">
+            <p id="modalText"></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#" class="social-icon" id="weixinIcon"><i class="fab fa-weixin"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-qq"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
